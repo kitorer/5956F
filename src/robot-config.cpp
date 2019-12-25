@@ -14,7 +14,7 @@ motor RightBack = motor(PORT5, ratio18_1, false);
 motor LeftFront = motor(PORT4, ratio18_1, true);
 motor RightFront = motor(PORT6, ratio18_1, false);
 motor IntakeLeft = motor(PORT7, ratio36_1, false);
-motor IntakeRight = motor(PORT10, ratio36_1, false);
+motor IntakeRight = motor(PORT10, ratio36_1, true);
 motor Gearbox = motor(PORT14, ratio36_1, false);
 motor Arm = motor(PORT9, ratio18_1, false);
 

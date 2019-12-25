@@ -1,0 +1,2 @@
+void arm();
+void armMacro();

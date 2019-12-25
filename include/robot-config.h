@@ -11,7 +11,7 @@ extern motor IntakeLeft;
 extern motor IntakeRight;
 extern motor Gearbox;
 extern motor Arm;
-void tankDrive();
+
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Text.
  * 

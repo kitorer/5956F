@@ -23,38 +23,10 @@ void autonomous(void) {
 void usercontrol(void) {
   while (1) {
  tankDrive();
-    //INTAKE
-      if (Controller1.ButtonL1.pressing()) {
-      IntakeLeft.spin(forward);
-      IntakeRight.spin(reverse);
-    } else if (Controller1.ButtonL2.pressing()) {
-      IntakeLeft.spin(reverse);
-      IntakeRight.spin(forward);
-    } else {
-      IntakeLeft.stop();
-      IntakeRight.stop();
-    }
-    //INTAKE
-    //GEARBOX
-    if (Controller1.ButtonDown.pressing()) {
-      Gearbox.spin(forward);
-    } else if (Controller1.ButtonUp.pressing()) {
-      Gearbox.spin(reverse);
-    } else {
-      Gearbox.setStopping(hold); 
-      Gearbox.stop();
-    }
-    //GEARBOX
-    //ARM
-    if (Controller1.ButtonR1.pressing()) {
-      Arm.spin(reverse);
-    } else if (Controller1.ButtonR2.pressing()) {
-      Arm.spin(forward);
-    } else {
-      Arm.setStopping(hold); 
-      Arm.stop();
-    }
-    //ARM
+ intake();
+ gearbox();
+ GearboxMacroDown();
+ GearboxMacroUp();
     wait(20, msec);
   }
 }

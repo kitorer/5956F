@@ -17,6 +17,15 @@
 
 #include "robot-config.h"
 
+#include "robot-config.h"
+#ifdef __cplusplus
+#include  "subsystems/drive.h"
+#include  "subsystems/pid.h"
+#include  "subsystems/arm.h"
+#include  "subsystems/tilter.h"
+#include  "subsystems/intake.h"
+#endif
+
 #define waitUntil(condition)                                                   \
   do {                                                                         \
     wait(5, msec);                                                             \
