@@ -1,6 +1,6 @@
 #include "vex.h"
 
-
+		
 void arm(){
     if (Controller1.ButtonR1.pressing()) {
       Arm.spin(reverse);
@@ -20,9 +20,11 @@ void armMacro(){
           count= count % 3; 
     }
     if(count==0){
+    Gearbox.rotateTo(0,degrees);
     Arm.rotateTo(0, degrees);
     }
     if(count==1){
+    Gearbox.rotateTo(100,degrees);
     Arm.rotateTo(250, degrees);
     }
     if(count==2){
